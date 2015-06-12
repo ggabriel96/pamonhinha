@@ -35,6 +35,9 @@ class Conjunto {
 	}
 	
 	public int tamanhoArray() {
+		if (this.valores == null) {
+			this.valores = new ArrayList<Object>();
+		}
 		return this.valores.size();
 	}
 	
