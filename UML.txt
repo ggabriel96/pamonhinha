@@ -1,0 +1,14 @@
+Conjunto
+---------
+- ArrayList<Object> valores
+---------
++ Object getValor(int indice)
++ void add(Object valor)
++ void del(Object valor)
++ Conjunto interseccao(Conjunto x)
++ Conjunto uniao(Conjunto x)
++ Object encontraMaior()
++ Object encontraMenor()
++ int tamanhoArray()
++ Integer encontraIndice(Object valor)
++ void ordena()
