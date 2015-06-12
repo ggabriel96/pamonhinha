@@ -9,7 +9,7 @@ class Horarios {
 	public static void main(String[] args) {
 		int i, maxDif, auxDif;
 		Scanner s = new Scanner(System.in);
-		Data[] input = new Data[3];
+		Data[] input = new Data[QTD];
 		Data resp;
 		
 		dif = new Data();
