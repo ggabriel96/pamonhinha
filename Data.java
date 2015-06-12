@@ -1,7 +1,7 @@
 class Data {
 	- String nome;
 	- int dia, mes, ano, hora, min, seg, diaSemana;
-	- boolean feriado;
+	- boolean feriado, primo;
 	
 	// não sei se precisam, mas tá aí um monte de construtor :P
 	+ Data();
@@ -30,6 +30,8 @@ class Data {
 	+ void setFeriado(boolean feriado);
 	+ String getNome();
 	+ void setNome(String nome);
+	+ boolean getPrimo();
+	+ void setPrimo(boolean primo);
 	
 	// conversões
 	+ int emDias();
