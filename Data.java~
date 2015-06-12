@@ -76,10 +76,20 @@ class Data {
 	}
 	
 	+ String getEstacao();
-	
-	// retorna um objeto Data contendo a diferença de tempo
-	// entre "outra" e "this"
-	+ Data diferenca(Data outra);
+
+	public Data diferenca(Data outra){
+		Data resp = new Data();
+		if(this.dia > outra.dia) resp.setDia(outra.dia + 30 - this.dia);
+		else resp.setDia(outra.dia - this.dia);
+		if(this.mes > outra.mes) resp.setMes(outra.mes + 12 - this.mes);
+		else resp.setMes(outra.mes - this.mes);
+		if(this.ano > outra.ano) resp.setAno(this.ano - outra.ano);
+		else resp.setAno(outra.ano - this.ano);
+		resp.setHora(this.hora - outra.hora);
+		resp.setMin(this.min - outra.min);
+		resp.setSeg(this.seg - outra.seg);
+	}
+
 	// retorna a data resultante de "this" + "outra"
 	+ Data soma(Data outra);
 =======
