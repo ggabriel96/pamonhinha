@@ -1,0 +1,14 @@
+Conjunto
+---------
+- ArrayList<Double> valores
+---------
++ Double getValor(int indice)
++ void add(double valor)
++ void del(double valor)
++ Conjunto interseccao(Conjunto x)
++ Conjunto uniao(Conjunto x)
++ Double encontraMaior()
++ Double encontraMenor()
++ int tamanhoArray()
++ Integer encontraIndice(double valor)
++ void ordena()
