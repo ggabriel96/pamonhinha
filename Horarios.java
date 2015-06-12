@@ -20,12 +20,10 @@ class Horarios {
 			
 			System.out.println("Digite o número do dia da data " + i + ": ");
 			data[i].setDia(s.nextInt());
-			System.out.println("Digite o número do mês da data " + i + ": ");
-			data[i].setMes(s.nextInt());
 		}
 		
 		for (i = 0; i < QTD; i++) {
-			auxDif = data[i].diferenca(new Data);
+			auxDif = 30 - data[i].getDia() + 1;
 			
 			if (i == 0) {
 				maxDif = auxDif;
