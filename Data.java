@@ -2,6 +2,7 @@ class Data {
 	- String nome;
 	- int dia, mes, ano, hora, min, seg, diaSemana;
 	- boolean feriado, primo, aniversario;
+	- Pessoa pessoa;
 	
 	// não sei se precisam, mas tá aí um monte de construtor :P
 	+ Data();
@@ -35,6 +36,8 @@ class Data {
 	+ void setPrimo(boolean primo);
 	+ boolean getAniversario();
 	+ void setAniversario(boolean aniversario);
+	+ Pessoa getPessoa();
+	+ void setPessoa(Pessoa p);
 	
 	// conversões
 	+ int emDias();
