@@ -1,42 +1,9 @@
 class Data {
-	- String nome;
-	- int dia, mes, ano, hora, min, seg, diaSemana;
-	- boolean feriado, primo, aniversario;
+	private String nome;
+	private int dia, mes, ano, hora, min, seg, diaSemana;
+	private boolean feriado, primo, aniversario;
 	
 	// não sei se precisam, mas tá aí um monte de construtor :P
-<<<<<<< HEAD
-	+ Data();
-	+ Data(int i, boolean feriado); // se quiser setar só um dos valores
-	+ Data(int dia, int mes, int ano, String nome);
-	+ Data(int dia, int mes, int ano, String nome, boolean aniversario);
-	+ Data(int dia, int mes, int ano, boolean feriado);
-	+ Data(int dia, int mes, int ano, String nome, boolean feriado);
-	+ Data(int dia, int mes, int ano, int hora, int min, int seg);
-	+ Data(int dia, int mes, int ano, int hora, int min, int seg, int diaSemana);
-	
-	+ int getDia();
-	+ void setDia(int dia);
-	+ int getMes();
-	+ void setMes(int mes);
-	+ int getAno();
-	+ void setAno(int ano);
-	+ int getHora();
-	+ void setHora(int hora);
-	+ int getMin();
-	+ void setMin(int min);
-	+ int getSeg();
-	+ void setSeg(int seg);
-	+ int getDiaSemana();
-	+ void setDiaSemana(int diaSemana);
-	+ boolean ehFeriado();
-	+ void setFeriado(boolean feriado);
-	+ String getNome();
-	+ void setNome(String nome);
-	+ boolean getPrimo();
-	+ void setPrimo(boolean primo);
-	+ boolean getAniversario();
-	+ void setAniversario(boolean aniversario);
-	
 
 	public int emDias(){
 		return this.emMeses()*30 + this.dia;
@@ -75,7 +42,7 @@ class Data {
 		return dia + "/" + mes + "/" + ano + "	" + hora + ":" + min + ":" + seg;
 	}
 	
-	+ String getEstacao();
+	// public String getEstacao();
 
 	public Data diferenca(Data outra){
 		Data resp = new Data();
@@ -88,11 +55,13 @@ class Data {
 		resp.setHora(this.hora - outra.hora);
 		resp.setMin(this.min - outra.min);
 		resp.setSeg(this.seg - outra.seg);
+
+		return resp;
 	}
 
 	// retorna a data resultante de "this" + "outra"
-	+ Data soma(Data outra);
-=======
+	// public Data soma(Data outra);
+
 	public Data() {}
 
 	public Data(int i, boolean feriado) { // se quiser setar só um dos valores
@@ -122,13 +91,14 @@ class Data {
 		this.setAno(ano);
 		this.setFeriado(feriado);
 	}
-	public Data(int dia, int mes, int ano, String nome, boolean feriado) {
+
+	/*public Data(int dia, int mes, int ano, String nome, boolean feriado) {
 		this.setDia(dia);
 		this.setMes(mes);
 		this.setAno(ano);
 		this.setNome(nome);
 		this.setFeriado(feriado);
-	}
+	}*/
 
 	public Data(int dia, int mes, int ano, int hora, int min, int seg) {
 		this.setDia(dia);
@@ -235,7 +205,7 @@ class Data {
 	}
 
 	
-	// conversões
+	/*// conversões
 	public int emDias();
 	public int emMeses();
 	public int emAnos();
@@ -252,6 +222,5 @@ class Data {
 	// entre "outra" e "this"
 	public Data diferenca(Data outra);
 	// retorna a data resultante de "this" public "outra"
-	public Data soma(Data outra);
->>>>>>> 714fb657c513931645de91f66932294cf366da77
+	public Data soma(Data outra);*/
 }
