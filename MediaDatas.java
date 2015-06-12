@@ -10,6 +10,7 @@ class MediaDatas {
 		int i, respMai = 0;
 		Scanner s = new Scanner(System.in);
 		Data[] input = new Data[QTD];
+		Data diff;
 		
 		for (i = 0; i < QTD; i++) {
 			data[i] = new Data();
@@ -28,8 +29,18 @@ class MediaDatas {
 			ano += data[i].getAno();
 		}
 		
+		dia /= QTD;
+		mes /= QTD;
+		ano /= QTD;
+		diff = new Data(dia, mes, ano, false);
+		
+		
 		for (i = 0; i < QTD; i++) {
-			
+			if (data[i].diferenca(diff).emDias() > 0) {
+				respMai++;
+			}
 		}
+		
+		System.out.println("Há " + respMai + " datas maiores que a média da entrada");
 	}
 }
