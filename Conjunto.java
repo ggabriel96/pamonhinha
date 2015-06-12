@@ -8,6 +8,9 @@ class Conjunto {
 	}
 	
 	public void add(Object valor) {
+		if (this.valores == null) {
+			this.valores = new ArrayList<Object>();
+		}
 		this.valores.add(valor);
 	}
 	
