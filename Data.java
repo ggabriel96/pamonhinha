@@ -1,16 +1,17 @@
 class Data {
 	- String nome;
 	- int dia, mes, ano, hora, min, seg, diaSemana;
-	- boolean feriado, primo;
+	- boolean feriado, primo, aniversario;
 	
 	// não sei se precisam, mas tá aí um monte de construtor :P
 	+ Data();
 	+ Data(int i, boolean feriado); // se quiser setar só um dos valores
 	+ Data(int dia, int mes, int ano, String nome);
+	+ Data(int dia, int mes, int ano, String nome, boolean aniversario);
 	+ Data(int dia, int mes, int ano, boolean feriado);
 	+ Data(int dia, int mes, int ano, String nome, boolean feriado);
-	+ Data(int dia, int mes, int ano, int hora, int min, int seg, boolean feriado);
-	+ Data(int dia, int mes, int ano, int hora, int min, int seg, int diaSemana, boolean feriado);
+	+ Data(int dia, int mes, int ano, int hora, int min, int seg);
+	+ Data(int dia, int mes, int ano, int hora, int min, int seg, int diaSemana);
 	
 	+ int getDia();
 	+ void setDia(int dia);
@@ -32,6 +33,8 @@ class Data {
 	+ void setNome(String nome);
 	+ boolean getPrimo();
 	+ void setPrimo(boolean primo);
+	+ boolean getAniversario();
+	+ void setAniversario(boolean aniversario);
 	
 	// conversões
 	+ int emDias();
