@@ -46,12 +46,9 @@ class Data {
 
 	public Data diferenca(Data outra){
 		Data resp = new Data();
-		if(this.dia > outra.getDia()) resp.setDia(outra.getDia() + 30 - this.dia);
-		else resp.setDia(outra.getDia() - this.dia);
-		if(this.mes > outra.getMes()) resp.setMes(outra.getMes() + 12 - this.mes);
-		else resp.setMes(outra.getMes() - this.mes);
-		if(this.ano > outra.getAno()) resp.setAno(this.ano - outra.getAno());
-		else resp.setAno(outra.getAno() - this.ano);
+		resp.setDia(outra.getDia() - this.dia);
+		resp.setMes(outra.getMes() - this.mes);
+		resp.setAno(outra.getAno() - this.ano);
 		resp.setHora(this.hora - outra.hora);
 		resp.setMin(this.min - outra.min);
 		resp.setSeg(this.seg - outra.seg);
