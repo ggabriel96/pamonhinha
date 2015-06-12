@@ -2,13 +2,13 @@ Conjunto
 ---------
 - ArrayList<Object> valores
 ---------
-+ Object getValor(int indice)
++ Object getValor(int indice) //Retorna null se não encotra nada
 + void add(Object valor)
 + void del(Object valor)
 + Conjunto interseccao(Conjunto x)
 + Conjunto uniao(Conjunto x)
-+ Object encontraMaior()
-+ Object encontraMenor()
++ Object encontraMaior() //Retorna null se não encotra nada
++ Object encontraMenor() //Retorna null se não encotra nada
 + int tamanhoArray()
-+ Integer encontraIndice(Object valor)
++ Integer encontraIndice(Object valor) //Retorna null se não encotra nada
 + void ordena()
