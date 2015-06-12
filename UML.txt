@@ -12,3 +12,4 @@ Conjunto
 + int tamanhoArray()
 + Integer encontraIndice(Object valor) //Retorna null se não encotra nada
 + void ordena()
++ boolean ehPrimo(int indice)
