@@ -36,17 +36,44 @@ class Data {
 	+ boolean getAniversario();
 	+ void setAniversario(boolean aniversario);
 	
-	// conversões
-	+ int emDias();
-	+ int emMeses();
-	+ int emAnos();
-	+ int emHoras();
-	+ int emMin();
-	+ int emSeg();
-	+ int emSemanas();
+
+	public int emDias(){
+		return this.emMeses()*30 + this.dia;
+	}
+
+	public int emMeses(){
+		return this.emAnos()*12 + this.mes;
+	}
+
+	public int emAnos(){
+		return this.ano;
+	}
+
+	public int emHoras(){
+		return this.emDias()*24 + this.hora;
+	}
+
+	public int emMin(){
+		return this.emHoras()*60 + this.min;
+	}
+
+	public int emSeg(){
+		return this.emMin()*60 + this.seg;
+	}
+
+	public int emSemanas(){
+		return this.emDias()/7;
+	}
+
+	public boolean ehBissexto(){
+		if(this.ano % 400 == 0 || (this.ano % 4 == 0 && this.ano % 100 != 0)) return true;
+		else return false;
+	}
+
+	public String toString(){
+		return dia + "/" + mes + "/" + ano + "	" + hora + ":" + min + ":" + seg;
+	}
 	
-	+ boolean ehBissexto();
-	+ String toString();
 	+ String getEstacao();
 	
 	// retorna um objeto Data contendo a diferença de tempo
